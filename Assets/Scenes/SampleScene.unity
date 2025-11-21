@@ -863,6 +863,9 @@ MonoBehaviour:
   maxSpeed: 10
   jumpForce: 10
   spriteRenderer: {fileID: 953475044}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   animator: {fileID: 953475046}
 --- !u!70 &729150541
 CapsuleCollider2D:
@@ -1265,7 +1268,7 @@ GameObject:
   - component: {fileID: 1185169518}
   - component: {fileID: 1185169517}
   - component: {fileID: 1185169516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundTileMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
