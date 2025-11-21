@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 566368364906784534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1033420242013793333}
+        m_TargetAssemblyTypeName: AudioPlay, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7435684745695895814
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8735389071245402430}
   - component: {fileID: 9010716583639676303}
+  - component: {fileID: 1033420242013793333}
   m_Layer: 5
   m_Name: ClickSound
   m_TagString: Untagged
@@ -391,3 +404,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1033420242013793333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805575497028480597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f7619343af3d24b941f9d5720a9912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playOnStart: 0
+  oneShot: 0
+  startDelay: 0
+  playWithFade: 0
+  targetVolume: 0.224
+  fadeSpeed: 1
+  clipsToPlay:
+  - {fileID: 8300000, guid: 4bdaef14fb63b2f4592426ebe2b91cb5, type: 3}
+  - {fileID: 8300000, guid: b2c3684c03fcc974b84fe0a0135dd090, type: 3}
+  - {fileID: 8300000, guid: a10766c35d3271941afff32310ccce3b, type: 3}
+  - {fileID: 8300000, guid: ad368a708fc91cd479853991c3966647, type: 3}
+  minTime: 0
+  maxTime: 0
+  minVolume: 1
+  maxVolume: 1
+  minPitch: 0.94
+  maxPitch: 1.12
