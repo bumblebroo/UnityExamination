@@ -94,19 +94,22 @@ public class PlatformerMovement : MonoBehaviour
         rb.linearVelocity = velocity;
         
         // Write movement animation code here. (Suggestion: send your current velocity into the Animator for both the x- and y-axis.)
+        if (animator)
+        {
+            animator.SetFloat("xVel", Mathf.Abs(velocity.x));
+
+        }
     }
 
     private bool IsGrounded()
     {
         // Is our groundCheckCollider touching the groundLayer? If so, return the value "true"
-        if (groundCheckCollider.IsTouchingLayers(groundLayer))
+        bool grounded = groundCheckCollider.IsTouchingLayers(groundLayer);
+        if (animator)
         {
-            return true;
+            animator.SetBool("Grounded", grounded);
         }
-        else
-        {
-            return false;
-        }
+        return grounded;
     }
 
     private void ApplyGravity()
