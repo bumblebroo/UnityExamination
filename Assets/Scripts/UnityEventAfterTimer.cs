@@ -13,7 +13,7 @@ public class UnityEventAfterTimer : MonoBehaviour
     [SerializeField] private float timerLength = 30f;
     private float defaultTime;
 
-    public TextMeshProUGUI timerValueUI;
+    public TextMeshPro timerValueUI;
 
     private bool displayText = false;
 
