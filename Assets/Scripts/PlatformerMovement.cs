@@ -181,7 +181,7 @@ public class PlatformerMovement : MonoBehaviour
     {
         if (context.started && controlEnabled)
         {
-            Debug.Log("Jump!");
+            // Debug.Log("Jump!");
             jumpInput = true;
             jumpReleased = false;
         }
