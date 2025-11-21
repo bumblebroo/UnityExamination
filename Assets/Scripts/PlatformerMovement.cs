@@ -18,7 +18,7 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField] private float fallGravityScale = 1;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    public bool controlEnabled { get; set; } = true; // You can edit this variable from Unity Events
+    private bool controlEnabled = true;
     
     private Vector2 moveInput;
     private Rigidbody2D rb;
@@ -191,5 +191,11 @@ public class PlatformerMovement : MonoBehaviour
             jumpReleased = true;
             jumpInput = false;
         }
+    }
+
+    public void PlayerCanMove(bool canMove)
+    {
+        controlEnabled = canMove;
+        velocity = Vector2.zero;
     }
 }
