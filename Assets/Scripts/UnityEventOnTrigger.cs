@@ -10,6 +10,8 @@ public class UnityEventOnTrigger : MonoBehaviour
     public string tagToActivate = "Player";
     
     public UnityEvent onTriggerEnter, onTriggerExit;
+    
+    private HashSet<GameObject> triggeredObjects = new HashSet<GameObject>();
 
     private void Awake()
     {
@@ -22,36 +24,40 @@ public class UnityEventOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(tagToActivate))
+        if (other.CompareTag(tagToActivate) && !triggeredObjects.Contains(other.gameObject))
         {
             onTriggerEnter.Invoke();
+            triggeredObjects.Add(other.gameObject);
             Debug.Log("Unity Event Trigger (enter) activated on " + gameObject);
         }
     }
     
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag(tagToActivate))
+        if (other.CompareTag(tagToActivate) && triggeredObjects.Contains(other.gameObject))
         {
             onTriggerExit.Invoke();
+            triggeredObjects.Remove(other.gameObject);
             Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tagToActivate))
+        if (other.CompareTag(tagToActivate) && !triggeredObjects.Contains(other.gameObject))
         {
             onTriggerEnter.Invoke();
+            triggeredObjects.Add(other.gameObject);
             Debug.Log("Unity Event Trigger (enter) activated on " + gameObject);
         }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(tagToActivate))
+        if (other.CompareTag(tagToActivate) && !triggeredObjects.Contains(other.gameObject))
         {
             onTriggerExit.Invoke();
+            triggeredObjects.Remove(other.gameObject);
             Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
         }
     }
