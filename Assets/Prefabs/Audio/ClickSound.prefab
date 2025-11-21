@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5136043708877662332
+--- !u!1 &937969008912732180
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3767896999685021250}
-  - component: {fileID: 6408232439356118426}
-  m_Layer: 0
-  m_Name: SeedPickupSound
+  - component: {fileID: 1760056720519389055}
+  - component: {fileID: 2043177012559989710}
+  - component: {fileID: 7998918964356813428}
+  m_Layer: 5
+  m_Name: ClickSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3767896999685021250
-Transform:
+--- !u!224 &1760056720519389055
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136043708877662332}
-  serializedVersion: 2
+  m_GameObject: {fileID: 937969008912732180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.447348, y: 1.8901573, z: 0.13534148}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6408232439356118426
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &2043177012559989710
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136043708877662332}
+  m_GameObject: {fileID: 937969008912732180}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3337371238031937362, guid: cc94097c1fded464aa38408cb99e572b, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ea755146f3e5e2746869ff166aaf2e48, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -129,3 +134,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7998918964356813428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937969008912732180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f7619343af3d24b941f9d5720a9912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playOnStart: 1
+  oneShot: 1
+  startDelay: 0
+  playWithFade: 0
+  targetVolume: 1
+  fadeSpeed: 1
+  clipsToPlay:
+  - {fileID: 8300000, guid: 4bdaef14fb63b2f4592426ebe2b91cb5, type: 3}
+  - {fileID: 8300000, guid: b2c3684c03fcc974b84fe0a0135dd090, type: 3}
+  - {fileID: 8300000, guid: a10766c35d3271941afff32310ccce3b, type: 3}
+  - {fileID: 8300000, guid: ad368a708fc91cd479853991c3966647, type: 3}
+  minTime: 0
+  maxTime: 0
+  minVolume: 0.209
+  maxVolume: 0.269
+  minPitch: 0.94
+  maxPitch: 1.12
