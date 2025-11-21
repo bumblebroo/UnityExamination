@@ -14482,6 +14482,10 @@ PrefabInstance:
       value: PlatformerMovement, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1601253531122761558, guid: 351c6edbf74965e4c982124072dc09a6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601253531122761558, guid: 351c6edbf74965e4c982124072dc09a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
