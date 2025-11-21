@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1900276927994920070}
   - component: {fileID: 4391932781012420369}
   - component: {fileID: 6203796497292438205}
+  - component: {fileID: 3484115912728736470}
   m_Layer: 0
   m_Name: CollectibleSeed
   m_TagString: Untagged
@@ -153,6 +154,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3484115912728736470}
+        m_TargetAssemblyTypeName: InstantiateOnEvent, Assembly-CSharp
+        m_MethodName: InstantiatePrefab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTriggerExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3484115912728736470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71976173531440205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0f4702dcfaa524dbdb633b2e1bc32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 5136043708877662332, guid: cd4d9451755ef874d9ca52037f298be9, type: 3}
+  instantiationTransform: {fileID: 4649686960937519861}
+  instanceLifeTime: 5
