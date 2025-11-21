@@ -113,6 +113,7 @@ public class Health : MonoBehaviour
         {
             OnDie?.Invoke();
             //Add animation-trigger here
+            
         }
     }
 }
