@@ -860,8 +860,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082201bc83cbdcf41a531b97232c0245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  jumpForce: 10
+  maxSpeed: 7
+  jumpForce: 7
+  baseGravityScale: 1
+  fallGravityScale: 2
   spriteRenderer: {fileID: 953475044}
   groundLayer:
     serializedVersion: 2
@@ -6746,7 +6748,7 @@ GameObject:
   - component: {fileID: 1575035315}
   - component: {fileID: 1575035314}
   - component: {fileID: 1575035313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

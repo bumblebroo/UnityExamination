@@ -28,7 +28,7 @@ public class UnityEventOnTrigger : MonoBehaviour
         {
             onTriggerEnter.Invoke();
             triggeredObjects.Add(other.gameObject);
-            Debug.Log("Unity Event Trigger (enter) activated on " + gameObject);
+            // Debug.Log("Unity Event Trigger (enter) activated on " + gameObject);
         }
     }
     
@@ -38,7 +38,7 @@ public class UnityEventOnTrigger : MonoBehaviour
         {
             onTriggerExit.Invoke();
             triggeredObjects.Remove(other.gameObject);
-            Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
+            // Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
         }
     }
 
@@ -48,7 +48,7 @@ public class UnityEventOnTrigger : MonoBehaviour
         {
             onTriggerEnter.Invoke();
             triggeredObjects.Add(other.gameObject);
-            Debug.Log("Unity Event Trigger (enter) activated on " + gameObject);
+            // Debug.Log("Unity Event Trigger (enter) activated on " + gameObject);
         }
     }
     
@@ -58,7 +58,7 @@ public class UnityEventOnTrigger : MonoBehaviour
         {
             onTriggerExit.Invoke();
             triggeredObjects.Remove(other.gameObject);
-            Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
+            // Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
         }
     }
 }

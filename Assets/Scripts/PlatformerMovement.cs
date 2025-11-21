@@ -14,7 +14,8 @@ public class PlatformerMovement : MonoBehaviour
 {
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpForce = 10f;
-    // [SerializeField] private float gravityMultiplier = 1;    //unused
+    [SerializeField] private float baseGravityScale = 1;
+    [SerializeField] private float fallGravityScale = 1;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     public bool controlEnabled { get; set; } = true; // You can edit this variable from Unity Events
@@ -58,6 +59,15 @@ public class PlatformerMovement : MonoBehaviour
         {
             velocity.y = jumpForce;
             jumpInput = false;
+        }
+
+        if (!wasGrounded && velocity.y < 0)
+        {
+            rb.gravityScale = fallGravityScale;
+        }
+        else
+        {
+            rb.gravityScale = baseGravityScale;
         }
         
         // Check if character lost contact with ground this frame
